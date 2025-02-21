@@ -1,0 +1,30 @@
+dataset: 
+  type: real
+  name: avmnist_mfcc
+  path: ./datasets/avmnist/avmnist_mfcc
+  num_classes: 10
+  args: 
+    batch_size: 64
+    to4by4_img: True
+    to4by4_aud: False
+  tokenize: False
+model: 
+  0:
+    model_type: vit
+    n_features: 16
+    hidden_dim: 16
+    nhead: 1
+    max_seq_length: 49
+    use_cls_token: True
+    tokenize: False
+    norm_first: False
+  1:
+    model_type: transformer
+    n_features: 36
+    hidden_dim: 36
+    nhead: 1
+    max_seq_length: 20
+    use_cls_token: True
+    tokenize: False
+    norm_first: False
+  setting: uni

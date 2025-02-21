@@ -1,0 +1,23 @@
+xs:
+  shared_feature_dim: 8
+  unique_feature_dim: 4
+  num_data: 65536 # 2^(16)
+  use_probs: False
+
+het_setting: uni
+transforms:
+  mode: depth
+  nonlin: tanh
+
+num_classes: 4
+transforms_seed: 0
+features_seed: 1
+weights_seed: 2
+base_temp: 0.05
+min_red: 0
+max_red: 8
+min_depth: 0
+max_depth: 10
+  
+  
+    

@@ -1,0 +1,12 @@
+.*
+!/.gitignore
+__pycache__/
+*.pyc
+experiments/*
+datasets/affect/mosei/*
+datasets/affect/mosi/*
+datasets/affect/sarcasm/*
+datasets/affect/humor/*
+datasets/avmnist/avmnist_mfcc/*
+datasets/text_image_sentiment_dataset/output_*
+datasets/text_image_sentiment_dataset/training.1600000.processed.noemoticon.csv

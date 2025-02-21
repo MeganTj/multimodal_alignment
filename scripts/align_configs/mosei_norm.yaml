@@ -1,0 +1,41 @@
+dataset: 
+  type: real
+  name: mosei
+  path: ./datasets/affect/mosei/mosei_senti_data.pkl
+  num_classes: 1
+  args: 
+    batch_size: 64
+    max_pad: True
+    data_type: mosei
+    task: regression
+    norm_modal: ["vision", "audio"]
+  tokenize: False
+model: 
+  0:
+    model_type: transformer
+    n_features: 35
+    hidden_dim: 35
+    nhead: 1
+    max_seq_length: 50
+    use_cls_token: False
+    tokenize: False
+    norm_first: False
+  1:
+    model_type: transformer
+    n_features: 74
+    hidden_dim: 74
+    nhead: 1
+    max_seq_length: 50
+    use_cls_token: False
+    tokenize: False
+    norm_first: False
+  2:
+    model_type: transformer
+    n_features: 300
+    hidden_dim: 300
+    nhead: 1
+    max_seq_length: 50
+    use_cls_token: False
+    tokenize: False
+    norm_first: False
+  setting: uni

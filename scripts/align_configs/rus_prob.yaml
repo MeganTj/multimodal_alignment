@@ -1,0 +1,23 @@
+dataset: 
+  # type, name, num_classes are required
+  type: synthetic_prob
+  num_classes: 4
+  batch_size: 512
+  format: experiments/data/{}_DATA_{}_seeds_0_1_2.pickle  # will be formatted with model_setting, dataset_name, synthetic_depth
+  setting: uni
+  args:
+    keys: ["0", "1", "label"]
+    modalities: [1, 1]
+    batch_size: 512
+    num_workers: 2
+model: 
+  # specify config for models trained on each modality
+  0:
+    model_type: mlp
+    input_dim: 12
+    hidden_dim: 12
+  1:
+    model_type: mlp
+    input_dim: 12
+    hidden_dim: 12
+  setting: uni

@@ -107,7 +107,7 @@ if __name__ == "__main__":
     parser.add_argument('--num-mi', default=1, type=int)
     parser.add_argument('--config-dir', default='synthetic/configs', type=str)
     parser.add_argument('--copy-data-dir', default=None, type=str)
-    parser.add_argument('--out-path', default='experiments/data', type=str)
+    parser.add_argument('--out-path', default='synthetic/data', type=str)
     args = parser.parse_args()
     if not os.path.exists(args.out_path):
         os.makedirs(args.out_path)

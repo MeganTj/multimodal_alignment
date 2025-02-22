@@ -3,7 +3,7 @@ dataset:
   type: synthetic_prob
   num_classes: 4
   batch_size: 512
-  format: experiments/data/{}_DATA_{}_seeds_0_1_2.pickle  # will be formatted with model_setting, dataset_name, synthetic_depth
+  format: synthetic/data/{}_DATA_{}_seeds_0_1_2.pickle  # will be formatted with model_setting, dataset_name, synthetic_depth
   setting: uni
   args:
     keys: ["0", "1", "label"]

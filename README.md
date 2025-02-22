@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 # Synthetic Dataset
 
-Download our synthetic dataset [here](https://drive.google.com/drive/folders/1pRMMlKKrWsomkbvGoopKImx5oIy3m3RI?usp=drive_link) and move the `data` folder under `experiments`.
+Download our synthetic dataset [here](https://drive.google.com/drive/folders/1pRMMlKKrWsomkbvGoopKImx5oIy3m3RI?usp=drive_link) and move the `data` folder under `synthetic/data`.
 You can also generate synthetic datasets by running the below:
 
 ```

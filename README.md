@@ -1,6 +1,6 @@
 # Understanding the Emergence of Multimodal Alignment
 
-This is the official codebase for the paper Understanding the Emergence of Multimodal Alignment.
+This is the official codebase for the paper Understanding the Emergence of Multimodal Representation Alignment.
 
 # Installation
 

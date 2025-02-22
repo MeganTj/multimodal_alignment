@@ -1,0 +1,3 @@
+[submodule "platonic-rep-unique"]
+	path = platonic-rep-unique
+	url = git@github.com:MeganTj/platonic-rep-unique.git

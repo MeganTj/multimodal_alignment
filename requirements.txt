@@ -1,0 +1,9 @@
+matplotlib
+scikit-learn
+memory-profiler
+tqdm
+pyyaml
+seaborn
+h5py
+pymp
+optuna

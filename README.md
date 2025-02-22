@@ -2,11 +2,26 @@
 
 This is the official codebase for the paper Understanding the Emergence of Multimodal Alignment.
 
-# Environment
+# Installation
 
-Create a conda environment.
+After cloning the directory, initialize the submodule.
+
 ```
-conda env create -f environment.yml
+git submodule init; git submodule update
+```
+
+The repo is tested with Python=3.10.15 and PyTorch=2.5.0. A new environment can be created via:
+```
+conda create -n align python=3.10.15
+conda activate align
+conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
+
+Within the conda environment, dependencies for the vision-language experiments can be installed. 
+```
+cd platonic-rep-unique
+pip install -r requirements.txt
 ```
 
 # Synthetic Dataset
@@ -47,6 +62,11 @@ After running experiments with multiple seeds, compute the alignment/performance
 ```
 python ./scripts/evaluate_multiseed.py --exp-config scripts/align_configs/sarcasm_norm.yaml --modalities 0 1 
 ```
+
+# Vision-Language
+
+See `platonic-rep-unique` for instructions on setting up and running vision-language experiments.
+
 
 # Additional Experiments
 

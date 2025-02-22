@@ -1,5 +1,4 @@
 import numpy as np
-from contextlib import redirect_stdout
 from train_compute_align import run_align_exp, get_configs_and_results_path, get_exp_args
 import argparse
 import os
@@ -30,8 +29,6 @@ save_name = exp_config_name if exp_args.dataset_name is None else exp_args.datas
 if exp_args.red_key is not None:
     save_name +=  f"_{exp_args.red_key}"
 mod_str = '_'.join([str(modality) for modality in exp_args.modalities])
-if exp_args.contrastive_expert_modality != -1:
-    mod_str += f"_exp_{exp_args.contrastive_expert_modality}"
 hyp_file = os.path.join(save_dir, f"{save_name}_mod_{mod_str}.yaml")
 hyp_log_file = os.path.join(save_dir, f"{save_name}_mod_{mod_str}_log.txt")
 # Tune the hyperparameters

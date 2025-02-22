@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 experiments/*
+synthetic/data/*
 datasets/affect/mosei/*
 datasets/affect/mosi/*
 datasets/affect/sarcasm/*

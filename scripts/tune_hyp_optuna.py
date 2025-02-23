@@ -87,7 +87,6 @@ def run_final_experiment(exp_args, hyp_args, hyp_file, hyp_final_file):
     _, _, _, _, results_path = get_configs_and_results_path(final_args)
     with open(hyp_final_file, "w") as file:
         yaml.dump({"results_path": results_path}, file)
-    final_args.use_saved_model = False
     # Run the final experiment
     run_align_exp(final_args)
 

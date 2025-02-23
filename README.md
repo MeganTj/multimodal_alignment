@@ -1,4 +1,4 @@
-# Understanding the Emergence of Multimodal Alignment
+# Understanding the Emergence of Multimodal Representation Alignment
 
 This is the official codebase for the paper Understanding the Emergence of Multimodal Representation Alignment.
 

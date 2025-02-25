@@ -24,6 +24,9 @@ cd platonic-rep-unique
 pip install -r requirements.txt
 ```
 
+We additionally provide experiment hyperparameters in `hyp` folder. To use them, move `hyp` to `experiments/hyp`.
+
+
 # Synthetic Dataset
 
 Download our synthetic dataset [here](https://drive.google.com/drive/folders/1pRMMlKKrWsomkbvGoopKImx5oIy3m3RI?usp=drive_link) and move the `data` folder under `synthetic/data`.
@@ -51,10 +54,12 @@ Use the following links to download the processed affect datasets from [MultiBen
 [humor](https://drive.google.com/drive/folders/1Agzm157lciMONHOHemHRSySmjn1ahHX1?usp=drive_link), [mosi](https://drive.google.com/drive/folders/1uEK737LXB9jAlf9kyqRs6B9N6cDncodq?usp=drive_link), 
 [mosei](https://drive.google.com/drive/folders/1A_hTmifi824gypelGobgl2M-5Rw9VWHv?usp=drive_link) and move the downloaded datasets to the `datasets` folder. For example, the path to MOSEI should be `datasets/mosei/mosei_senti_data.pkl`. Our AVMNIST dataset can be downloaded [here](https://drive.google.com/drive/folders/17vGI0voQyCTyhqDq3hQhhiwXACV7zXqU?usp=sharing).
 
-An example workflow is as follows. First, run experiments as follows. See `./scripts/tune_real.sh` for more details on the arguments.
+An example workflow is as follows. First, run experiments (each bash command will run the same experiment with a different seed) as follows. See `./scripts/tune_real.sh` for more details on the arguments.
 
 ```
-bash ./scripts/tune_real.sh 5 synthetic/align_configs/sarcasm_norm.yaml 50 0 1 "classification" "classification" 2
+bash ./scripts/tune_real.sh 0 scripts/align_configs/sarcasm_norm.yaml 50 0 1 "classification" "classification" 2 &&
+bash ./scripts/tune_real.sh 0 scripts/align_configs/sarcasm_norm.yaml 50 0 1 "classification" "classification" 22 && 
+bash ./scripts/tune_real.sh 0 scripts/align_configs/sarcasm_norm.yaml 50 0 1 "classification" "classification" 42
 ```
 
 After running experiments with multiple seeds, compute the alignment/performance correlation.

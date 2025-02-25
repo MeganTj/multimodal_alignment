@@ -130,6 +130,8 @@ def run_eval(args):
             # Get the lr and wd for the modalities
             lr = dct["lr"][:-1]
             wd = dct["wd"][:-1]
+        if not os.path.exists(os.path.join(full_hyp_dir, result_file)):
+            raise FileNotFoundError(f"Experiment results with seed {seed} don't exist")
         with open(os.path.join(full_hyp_dir, result_file), "r") as stream:
             results_path = yaml.safe_load(stream)["results_path"]
             results=np.load(results_path, allow_pickle=True)

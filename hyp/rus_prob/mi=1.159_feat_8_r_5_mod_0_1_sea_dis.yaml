@@ -1,0 +1,10 @@
+modal_0:
+  params:
+    lr_modal_0: 0.01
+    wd_modal_0: 0.001
+  value: 0.6620404011044906
+modal_1:
+  params:
+    lr_modal_1: 0.01
+    wd_modal_1: 0.0001
+  value: 0.7328295305914839
